@@ -23,7 +23,7 @@ public class ProtectedController {
 
     @Inject JsonWebToken token;
     @GET
-    @RolesAllowed("super")
+    @RolesAllowed("protected")
     public String getJWTBasedValue() {
         return "Protected Resource; Custom value : " + custom.getValue() + " token:" + token.getRawToken();
     }
